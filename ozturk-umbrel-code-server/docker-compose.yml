@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: ozturk-umbrel-code-server_server_1
+      APP_PORT: 8080
+
+  server:
+    image: codercom/code-server:4.21.1@sha256:c9f78fb7e8ac5fdd3bea856142dd5c5dda0f5183131254516af74135dc97c773
+    restart: on-failure
+    user: "1000:1000"
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/coder
+      - ${UMBREL_ROOT}:/home/coder/umbrel
+      - /:/home/coder/system
+    environment:
+      PASSWORD: $APP_PASSWORD

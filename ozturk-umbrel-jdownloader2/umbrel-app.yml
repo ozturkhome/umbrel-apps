@@ -1,0 +1,35 @@
+manifestVersion: 1
+id: ozturk-umbrel-jdownloader2
+category: networking
+name: JDownloader2
+version: "24.01.1"
+tagline: Docker container for JDownloader 2
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/icon.png
+description: >
+  This project implements a Docker container for JDownloader 2.
+
+  The GUI of the application is accessed through a modern web browser (no installation or configuration needed on the client side) or via any VNC client.
+
+  JDownloader 2 is a free, open-source download management tool with a huge community of developers that makes downloading as easy and fast as it should be. Users can start, stop or pause downloads, set bandwith limitations, auto-extract archives and much more. It's an easy-to-extend framework that can save hours of your valuable time every day!
+developer: jlesage
+website: https://jdownloader.org/
+dependencies: []
+repo: https://github.com/jlesage/docker-jdownloader-2
+support: https://github.com/jlesage/docker-jdownloader-2/issues
+port: 5800
+gallery:
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/screenshot-2.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+releaseNotes: >
+  Updated baseimage to version 4.5.3, which brings the following changes:
+
+  Disabled fullscreen support when page is loaded into an iFrame.
+  Rebuilt against latest distro images to get security fixes.
+permissions:
+  - STORAGE_DOWNLOADS
+submitter: 1kemalozturk
+submission:
