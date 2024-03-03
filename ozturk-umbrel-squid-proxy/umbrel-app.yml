@@ -4,7 +4,7 @@ name: Squid Proxy
 category: networking
 version: "0.0.0"
 tagline: Squid is a caching proxy for the Web. Long-term versions maintained by Canonical.
-icon: https://raw.githubusercontent.com/1kemalozturk/umbrel-apps/master/ozturk-umbrel-squid-proxy/logo.png?raw=true
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/master/ozturk-umbrel-squid-proxy/logo.png?raw=true
 description: >
   
 developer: ubuntu
@@ -19,5 +19,5 @@ path: ""
 defaultPassword: ""
 releaseNotes: >
   
-submitter: 1kemalozturk
+submitter: ozturkhome
 submission:

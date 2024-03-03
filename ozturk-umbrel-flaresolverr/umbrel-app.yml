@@ -4,7 +4,7 @@ category: media
 name: FlareSolverr
 version: "3.3.16"
 tagline: Proxy server to bypass Cloudflare protection
-icon: https://raw.githubusercontent.com/1kemalozturk/umbrel-apps/master/ozturk-umbrel-flaresolverr/logo.png?raw=true
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/master/ozturk-umbrel-flaresolverr/logo.png?raw=true
 description: >
  FlareSolverr starts a proxy server, and it waits for user requests in an idle state using few resources. When some request arrives, it uses Selenium with the undetected-chromedriver to create a web browser (Chrome). It opens the URL with user parameters and waits until the Cloudflare challenge is solved (or timeout). The HTML code and the cookies are sent back to the user, and those cookies can be used to bypass Cloudflare using other HTTP clients.
 
@@ -18,12 +18,12 @@ repo: https://github.com/FlareSolverr/FlareSolverr/
 support: https://github.com/FlareSolverr/FlareSolverr/
 port: 8191
 gallery:
-  - https://raw.githubusercontent.com/1kemalozturk/umbrel-apps/master/ozturk-umbrel-flaresolverr/1.png
+  - https://raw.githubusercontent.com/ozturkhome/umbrel-apps/master/ozturk-umbrel-flaresolverr/1.png
 path: ""
 releaseNotes: >
   Fix of the subprocess.STARTUPINFO() call. Thanks @ceconelo
   Add FreeBSD support. Thanks @Asthowen
   Use headless configuration properly. Thanks @hashworks
 torOnly: false
-submitter: 1kemalozturk
+submitter: ozturkhome
 submission:

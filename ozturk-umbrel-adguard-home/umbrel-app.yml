@@ -35,5 +35,5 @@ releaseNotes: >
 
   Removed
   Default exposure of the non-standard ports 784 and 8853 for DNS-over-QUIC in the Dockerfile.
-submitter: 1kemalozturk
+submitter: ozturkhome
 submission:
