@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: ozturk-umbrel-squid-proxy
+id: ozturkhome-squid-proxy
 name: Squid Proxy
 category: networking
 version: "0.0.0"

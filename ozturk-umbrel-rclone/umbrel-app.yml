@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: ozturk-umbrel-rclone
+id: ozturkhome-rclone
 name: RClone
 category: files
 version: "1.65.2"
