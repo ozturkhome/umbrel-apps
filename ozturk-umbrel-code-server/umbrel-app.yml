@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: ozturkhome-code-server
+id: ozturk-umbrel-code-server
 category: developer
 name: code-server
 version: "4.21.1"
