@@ -2,11 +2,12 @@ manifestVersion: 1
 id: ozturk-umbrel-easypanel
 name: Easypanel
 category: Developer Tools
-version: "latest"
+version: "canary"
 tagline: Modern Server Control Panel
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-umbrel-easypanel/logo.png?raw=true
 description: >
   Next Generation Server Control Panel
+  
   Use an intuitive interface to deploy applications, manage databases, and provision SSL certificates.
 developer: deiucanta
 website: https://easypanel.io/

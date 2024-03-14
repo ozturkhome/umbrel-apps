@@ -7,20 +7,20 @@ services:
       APP_PORT: 3000
 
   server:
-    # Service for running Chromium browser in a container
-    image: easypanel/easypanel:latest
+    image: easypanel/easypanel:canary
 
     # Set environment variables for the container
     environment:
       - PUID=1000 # Set the user ID for the container process (optional)
       - PGID=1000 # Set the group ID for the container process (optional)
       - TZ=Etc/UTC # Set the timezone inside the container to UTC (optional)
+      - RELEASE_TAG=canary
 
     # Mount volumes from the host into the container
     volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
       - ${APP_DATA_DIR}/data/config:/config
-      # Map the host directory /data/chromium/config to the container's /config directory
-      # This allows the container to read/write configuration files to the specified host directory
+      - ${APP_DATA_DIR}/etc/easypanel:/etc/easypanel
 
     # Define the restart policy for the container
     restart: unless-stopped
