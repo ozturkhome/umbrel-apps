@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-umbrel-adguard-home
 name: Adguard Home
 category: networking
-version: "0.107.46"
+version: "0.108.0-b.54"
 tagline: Network-wide ads & trackers blocking DNS server
 icon: https://github.com/walkxcode/dashboard-icons/blob/main/png/adguard-home.png?raw=true
 description: >
@@ -15,30 +15,28 @@ repo: https://github.com/AdguardTeam/AdguardHome
 support: https://github.com/AdguardTeam/AdguardHome/issues
 port: 8000
 gallery:
-  - https://i.imgur.com/gtLjT0L.png
+  - https://cdn.adguard.info/website/adguard.com/products/home/home.svg
+  - https://camo.githubusercontent.com/32e0cce4e74cedaa564e1156e9da302fb06c308d96e51239a158370fdaa17fc2/68747470733a2f2f63646e2e6164746964792e6f72672f7075626c69632f416467756172642f436f6d6d6f6e2f616467756172645f686f6d652e676966
 path: ""
 defaultPassword: ""
 releaseNotes: >
-  As promised in the notes for the previous release, this update brings some quality-of-life improvements as well as a few bug fixes 🔧.
+  Changes compared to the previous beta, v0.108.0-b.53. See CHANGELOG.md for all changes.
 
-  Full changelog
-  See also the v0.107.46 GitHub milestone.
+  Acknowledgements
+  A special thanks to our open-source contributors, @hoang-rio, as well as to everyone who filed and inspected issues, added translations, and helped us test this release!
 
+  Security
+  Go version has been updated to prevent the possibility of exploiting the Go vulnerabilities fixed in Go 1.21.8.
   Added
   Ability to disable the use of system hosts file information for query resolution (#6610).
-
-  Ability to define custom directories for storage of query log files and statistics (#5992).
-
   Changed
-  Private rDNS resolution (dns.use_private_ptr_resolvers in YAML configuration) now requires a valid "Private reverse DNS servers", when enabled (#6820).
+  Private RDNS resolution (dns.use_private_ptr_resolvers in YAML configuration) now requires a valid "Private reverse DNS servers", when enabled (#6820).
 
-  NOTE: Disabling private rDNS resolution behaves effectively the same as if no private reverse DNS servers provided by user and by the OS.
+  NOTE: Disabling private RDNS resolution behaves effectively the same as if no private reverse DNS servers provided by user and by the OS.
 
   Fixed
   Statistics for 7 days displayed by day on the dashboard graph (#6712).
 
   Missing "served from cache" label on long DNS server strings (#6740).
-
-  Incorrect tracking of the system hosts file's changes (#6711).
 submitter: ozturkhome
 submission:
