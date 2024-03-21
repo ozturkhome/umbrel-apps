@@ -2,12 +2,12 @@ version: "3.7"
 
 services:
   server:
-    image: adguard/adguardhome:v0.108.0-b.54
+    image: adguard/adguardhome:v0.107.46
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/work:/opt/adguardhome/work
       - ${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf
-    network_mode: bridge
+    network_mode: host
     ports:
       # plain DNS
       - 53:53/tcp
@@ -32,8 +32,6 @@ services:
       - 853:853/udp
       - 8853:8853/udp
 
-# Networks used by the application
-networks:
-  # Define the network for AdGuard Home
-  adguard-home-network:
-    driver: bridge
+#networks:
+  #adguard-home-network:
+    #driver: bridge
