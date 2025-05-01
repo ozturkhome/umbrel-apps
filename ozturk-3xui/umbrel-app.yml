@@ -21,7 +21,7 @@ gallery:
   - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/06-configs-dark.png
   - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/07-bot-dark.png
 path: ""
-defaultPassword: "admin"
+defaultPassword: ""
 releaseNotes: >
   
 submitter: ozturkhome

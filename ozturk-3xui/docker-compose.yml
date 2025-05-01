@@ -1,12 +1,6 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: ozturk-3xui_server_1
-      APP_PORT: 2053
-      PROXY_AUTH_ADD: "false"
-
   server:
       image: ghcr.io/mhsanaei/3x-ui:latest
       container_name: 3x-ui
@@ -17,6 +11,8 @@ services:
       environment:
         XRAY_VMESS_AEAD_FORCED: "false"
         X_UI_ENABLE_FAIL2BAN: "true"
+      ports:
+      - 2053:2053/tcp
       tty: true
       network_mode: host
       restart: always
