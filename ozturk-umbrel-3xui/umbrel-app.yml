@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: ozturk-umbrel-3xui
+name: 3x-ui
+category: networking
+version: "2.19.4"
+tagline: Docker container for 3x-ui
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-umbrel-portainer/logo.png?raw=true
+description: >
+  Xray panel supporting multi-protocol multi-user expire day & traffic & IP limit (Vmess & Vless & Trojan & ShadowSocks & Wireguard)
+developer: Sanaei
+website: https://t.me/XrayUI
+dependencies: []
+repo: https://github.com/MHSanaei/3x-ui
+support: https://t.me/XrayUI
+port: 2053
+gallery:
+  - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/01-overview-dark.png
+  - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/02-inbounds-dark.png
+  - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/03-add-inbound-dark.png
+  - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/05-settings-dark.png
+  - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/06-configs-dark.png
+  - https://raw.githubusercontent.com/MHSanaei/3x-ui/main/media/07-bot-dark.png
+path: ""
+defaultPassword: "admin"
+releaseNotes: >
+  
+submitter: 1kemalozturk
+submission:
