@@ -7,7 +7,6 @@ services:
       hostname: localhost
       volumes:
         - ${APP_DATA_DIR}/data/x-ui/:/etc/x-ui/
-        - ${APP_DATA_DIR}/data/cert/:/root/cert/
       environment:
         XRAY_VMESS_AEAD_FORCED: "false"
         X_UI_ENABLE_FAIL2BAN: "true"
