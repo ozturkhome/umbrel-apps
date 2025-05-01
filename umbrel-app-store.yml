@@ -1,2 +1,2 @@
-id: "ozturk-umbrel" # Choose the ID for your app store. This should contain only alphabets ("a to z") and dashes ("-").
+id: "ozturk" # Choose the ID for your app store. This should contain only alphabets ("a to z") and dashes ("-").
 name: "OZTURK" # Choose the name of your app store. It will show up in the UI as "<name> App Store".
