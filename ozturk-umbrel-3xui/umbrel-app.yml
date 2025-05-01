@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: ozturk-umbrel-3xui
+id: ozturk-3xui
 name: 3x-ui
 category: networking
 version: "2.19.4"
 tagline: Docker container for 3x-ui
-icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-umbrel-portainer/logo.png?raw=true
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-portainer/logo.png?raw=true
 description: >
   Xray panel supporting multi-protocol multi-user expire day & traffic & IP limit (Vmess & Vless & Trojan & ShadowSocks & Wireguard)
 developer: Sanaei
