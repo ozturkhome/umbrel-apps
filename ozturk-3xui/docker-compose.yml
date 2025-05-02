@@ -12,6 +12,7 @@ services:
         X_UI_ENABLE_FAIL2BAN: "true"
       ports:
       - 2053:2053/tcp
+      - 443:443/tcp
       tty: true
       network_mode: host
       restart: always
