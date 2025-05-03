@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: ozturk-sui
+name: s-ui
+category: networking
+version: "1.2.2"
+tagline: Docker container for s-ui
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-sui/logo.png?raw=true
+description: >
+  An advanced Web Panel • Built for SagerNet/Sing-Box
+developer: Sanaei
+website: https://t.me/XrayUI
+dependencies: []
+repo: https://github.com/alireza0/s-ui
+support: https://t.me/XrayUI
+port: 2095
+gallery:
+path: ""
+defaultUsername: "admin"
+defaultPassword: "admin"
+releaseNotes: >
+  
+submitter: alireza0
+submission:

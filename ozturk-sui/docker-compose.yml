@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  server:
+      image: alireza7/s-ui
+      container_name: s-ui
+      hostname: "s-ui"
+      volumes:
+        - ${APP_DATA_DIR}/:/etc/app
+      entrypoint: "./entrypoint.sh"
+      ports:
+      - "2095:2095"
+      - "2096:2096"
+      tty: true
+      network_mode: host
+      restart: always

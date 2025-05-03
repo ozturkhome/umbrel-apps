@@ -4,7 +4,7 @@ name: 3x-ui
 category: networking
 version: "2.5.8"
 tagline: Docker container for 3x-ui
-icon: https://github.com/MHSanaei/3x-ui/raw/main/media/3x-ui-dark.png
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-3xui/logo.png?raw=true
 description: >
   Xray panel supporting multi-protocol multi-user expire day & traffic & IP limit (Vmess & Vless & Trojan & ShadowSocks & Wireguard)
 developer: Sanaei
