@@ -14,7 +14,7 @@ repo: https://github.com/alireza0/s-ui
 support: https://t.me/XrayUI
 port: 2095
 gallery:
-path: ""
+path: "/app"
 defaultUsername: "admin"
 defaultPassword: "admin"
 releaseNotes: >
