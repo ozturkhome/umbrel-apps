@@ -1,8 +1,8 @@
 manifestVersion: 1
 id: ozturk-flaresolverr
-category: media
+category: networking
 name: FlareSolverr
-version: "3.3.16"
+version: "3.3.21"
 tagline: Proxy server to bypass Cloudflare protection
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-flaresolverr/logo.png?raw=true
 description: >
@@ -21,9 +21,8 @@ gallery:
   - https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-flaresolverr/1.png
 path: ""
 releaseNotes: >
-  Fix of the subprocess.STARTUPINFO() call. Thanks @ceconelo
-  Add FreeBSD support. Thanks @Asthowen
-  Use headless configuration properly. Thanks @hashworks
+  Add challenge selector to catch reloading page on non-English systems
+  Escape values for generated form used in request.post. Thanks @mynameisbogdan
 torOnly: false
 submitter: ozturkhome
 submission:
