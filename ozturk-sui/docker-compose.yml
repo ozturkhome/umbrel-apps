@@ -6,7 +6,7 @@ services:
       container_name: s-ui
       hostname: "s-ui"
       volumes:
-        - ${APP_DATA_DIR}/:/etc/app
+        - ${APP_DATA_DIR}/data:/etc/app
       entrypoint: "./entrypoint.sh"
       ports:
       - "2095:2095"
