@@ -4,7 +4,7 @@ name: s-ui
 category: networking
 version: "1.2.2"
 tagline: Docker container for s-ui
-icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-sui/logo.jpg?raw=true
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3s/logo.jpg?raw=true
 description: >
   An advanced Web Panel • Built for SagerNet/Sing-Box
 developer: Sanaei
