@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: ozturk-unbound
+name: unbound
+category: networking
+version: "1.2.2"
+tagline: Docker container for unbound
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-unbound/logo.jpg?raw=true
+description: >
+  Unbound DNS Server Docker Image
+developer: MatthewVance
+website: https://nlnetlabs.nl/projects/unbound/about/
+dependencies: []
+repo: https://github.com/MatthewVance/unbound-docker
+support: https://github.com/MatthewVance/unbound-docker/issues
+port: 5335
+gallery:
+path: ""
+releaseNotes: >
+  
+submitter: ozturkhome
+submission:
