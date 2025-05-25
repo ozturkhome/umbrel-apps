@@ -6,11 +6,14 @@ services:
     image: "mvance/unbound:latest"
     expose:
       - "53"
+    networks:
+      - dns
     ports:
       - "5335:53/tcp"
       - "5335:53/udp"
     volumes:
       - ${APP_DATA_DIR}/data/config/forward-records.conf:/opt/unbound/etc/unbound/forward-records.conf
       - ${APP_DATA_DIR}/data/config/a-records.conf:/opt/unbound/etc/unbound/a-records.conf
-    network_mode: host
     restart: always
+networks:
+  dns:
