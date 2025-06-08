@@ -14,4 +14,16 @@ services:
       - TZ=Europe/Istanbul     # Zaman dilimi
       - TELEGRAM_TOKEN=        # (İsteğe bağlı) Telegram entegrasyonu
       - TELEGRAM_CHATID=       # (İsteğe bağlı) Telegram chat ID
+    entrypoint: >
+      sh -c "
+        if [ ! -f /config/.env ]; then
+          echo 'APP_KEY=placeholder' > /config/.env;
+        fi;
+        if ! grep -q 'APP_KEY=base64:' /config/.env; then
+          cp /var/www/html/.env.example /config/.env;
+          php artisan key:generate --force --ansi;
+        fi;
+        php-fpm &
+        nginx -g 'daemon off;'
+      "
     restart: always
