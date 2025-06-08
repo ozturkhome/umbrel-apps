@@ -7,7 +7,7 @@ services:
     ports:
       - 5173:80 
     volumes:
-        - ${APP_DATA_DIR}/data:/config
+      - ${APP_DATA_DIR}/data:/config
     environment:
       - PUID=1000              # Kullanıcı ID (Linux kullanıcı ID'nizle değiştirin)
       - PGID=1000              # Grup ID (Linux grup ID'nizle değiştirin)
