@@ -13,6 +13,7 @@ dependencies: []
 repo: https://github.com/alexjustesen/speedtest-tracker
 support: https://github.com/alexjustesen/speedtest-tracker/issues
 port: 5173
+path: ""
 gallery:
   - https://raw.githubusercontent.com/alexjustesen/speedtest-tracker/refs/heads/main/.github/screenshots/dashboard.jpeg
 releaseNotes: >
