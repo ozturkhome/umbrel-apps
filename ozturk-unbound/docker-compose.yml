@@ -3,7 +3,7 @@ version: "3.7"
 services:
   unbound:
     container_name: unbound
-    image: "mvance/unbound:latest"
+    image: mvance/unbound:latest
     expose:
       - "53"
     networks:
