@@ -9,21 +9,19 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/config
     environment:
-      - PUID=1000              # Kullanıcı ID (Linux kullanıcı ID'nizle değiştirin)
-      - PGID=1000              # Grup ID (Linux grup ID'nizle değiştirin)
-      - TZ=Europe/Istanbul     # Zaman dilimi
-      - TELEGRAM_TOKEN=        # (İsteğe bağlı) Telegram entegrasyonu
-      - TELEGRAM_CHATID=       # (İsteğe bağlı) Telegram chat ID
-    entrypoint: >
-      sh -c "
-        if [ ! -f /config/.env ]; then
-          echo 'APP_KEY=placeholder' > /config/.env;
-        fi;
-        if ! grep -q 'APP_KEY=base64:' /config/.env; then
-          cp /var/www/html/.env.example /config/.env;
-          php artisan key:generate --force --ansi;
-        fi;
-        php-fpm &
-        nginx -g 'daemon off;'
-      "
-    restart: always
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - APP_KEY=
+      - APP_URL=
+      - DB_CONNECTION=sqlite
+      - SPEEDTEST_SCHEDULE=
+      - SPEEDTEST_SERVERS=
+      - DB_HOST= #optional
+      - DB_PORT= #optional
+      - DB_DATABASE= #optional
+      - DB_USERNAME= #optional
+      - DB_PASSWORD= #optional
+      - DISPLAY_TIMEZONE=Etc/UTC #optional
+      - PRUNE_RESULTS_OLDER_THAN=0 #optional
+    restart: unless-stopped
