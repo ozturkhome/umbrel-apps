@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: ozturk-speedtesttracker
-name: speedtest-tracker
+name: Speedtest Tracker
 category: networking
 version: "1.6.0"
 tagline: Docker container for speedtest-tracker
