@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  server:
+    image: jonssonyan/h-ui
+    container_name: h-ui
+    hostname: h-ui
+    network_mode: host
+    restart: always
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ${APP_DATA_DIR}/data/bin:/h-ui/bin
+      - ${APP_DATA_DIR}/data:/h-ui/data
+      - ${APP_DATA_DIR}/data/export:/h-ui/export
+      - ${APP_DATA_DIR}/data/logs:/h-ui/logs

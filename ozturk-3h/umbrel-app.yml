@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: ozturk-3h
+name: h-ui
+category: networking
+version: "0.0.20"
+tagline: Docker container for h-ui
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3h/logo.jpg?raw=true
+description: >
+  Just the panel for Hysteria2 / 仅仅是 Hysteria2 的面板
+developer: jonssonyan
+website: https://t.me/jonssonyan_channel
+dependencies: []
+repo: https://github.com/jonssonyan/h-ui
+support: https://github.com/jonssonyan/h-ui/issues
+port: 8081
+gallery:
+path: ""
+releaseNotes: >
+  
+submitter: ozturkhome
+submission:
