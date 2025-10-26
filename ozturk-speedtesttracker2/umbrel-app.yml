@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-speedtesttracker-2
 name: SpeedTest-Tracker 2
 category: networking
-version: "1.6.0"
+version: "1.6.9"
 tagline: Docker container for speedtest-tracker
 icon: https://github.com/alexjustesen/speedtest-tracker/blob/main/public/img/speedtest-tracker-icon.png?raw=true
 description: >
