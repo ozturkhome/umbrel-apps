@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: jlesage/jdownloader-2:v24.01.1
+    image: jlesage/jdownloader-2:v25.07.2
     restart: on-failure
     stop_grace_period: 1m
     #network_mode: host

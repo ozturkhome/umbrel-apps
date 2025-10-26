@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-3x
 name: 3x-ui
 category: networking
-version: "2.5.8"
+version: "2.8.5"
 tagline: Docker container for 3x-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3x/logo.jpg?raw=true
 description: >

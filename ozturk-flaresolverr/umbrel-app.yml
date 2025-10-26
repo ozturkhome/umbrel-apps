@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-flaresolverr
 category: networking
 name: FlareSolverr
-version: "3.3.21"
+version: "3.4.2"
 tagline: Proxy server to bypass Cloudflare protection
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-flaresolverr/logo.png?raw=true
 description: >

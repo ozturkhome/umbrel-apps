@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-portainer
 name: Portainer
 category: Developer Tools
-version: "2.19.4"
+version: "2.35.0 STS"
 tagline: Self-hosted container management
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/main/ozturk-portainer/logo.png?raw=true
 description: >
