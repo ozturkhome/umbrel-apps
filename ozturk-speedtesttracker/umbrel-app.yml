@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: ozturk-speedtesttracker-2
-name: SpeedTest-Tracker 2
+id: ozturk-speedtesttracker
+name: SpeedTest-Tracker
 category: networking
-version: "1.6.9"
+version: "1.6.10"
 tagline: Docker container for speedtest-tracker
 icon: https://github.com/alexjustesen/speedtest-tracker/blob/main/public/img/speedtest-tracker-icon.png?raw=true
 description: >
@@ -12,7 +12,7 @@ website: https://github.com/alexjustesen/Speedtest-Tracker
 dependencies: []
 repo: https://github.com/alexjustesen/Speedtest-Tracker
 support: https://github.com/alexjustesen/Speedtest-Tracker/issues
-port: 8001
+port: 10163
 path: ""
 gallery:
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/dashboard_screenshot.jpg
