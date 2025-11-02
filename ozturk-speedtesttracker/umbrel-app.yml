@@ -4,7 +4,7 @@ name: SpeedTest-Tracker
 category: networking
 version: "1.6.10"
 tagline: Docker container for speedtest-tracker
-icon: https://github.com/alexjustesen/speedtest-tracker/blob/main/public/img/speedtest-tracker-icon.png?raw=true
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-speedtesttracker/logo.jpg?raw=true
 description: >
   A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI.
 developer: alexjustesen
@@ -14,6 +14,8 @@ repo: https://github.com/alexjustesen/Speedtest-Tracker
 support: https://github.com/alexjustesen/Speedtest-Tracker/issues
 port: 10163
 path: ""
+defaultUsername: ""
+defaultPassword: ""
 gallery:
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/dashboard_screenshot.jpg
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/results_screenshot.jpg
