@@ -6,7 +6,7 @@ services:
     container_name: netbootxyz
     environment:
       - MENU_VERSION=2.0.84 # optional
-      - NGINX_PORT=8000 # optional
+      - NGINX_PORT=8080 # optional
       - WEB_APP_PORT=3000 # optional
     volumes:
       - ${APP_DATA_DIR}/data/config:/config # optional
@@ -14,5 +14,5 @@ services:
     ports:
       - 3000:3000  # optional, destination should match ${WEB_APP_PORT} variable above.
       - 69:69/udp
-      - 8080:8000  # optional, destination should match ${NGINX_PORT} variable above.
+      - 8080:8080  # optional, destination should match ${NGINX_PORT} variable above.
     restart: unless-stopped
