@@ -18,6 +18,8 @@ gallery:
   - 2.jpg
   - 3.jpg
 path: ""
+defaultUsername: ""
+defaultPassword: ""
 releaseNotes: >
   
 submitter: ozturkhome
