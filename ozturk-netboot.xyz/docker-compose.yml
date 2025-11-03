@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: ghcr.io/netbootxyz/netbootxyz
+    image: ghcr.io/netbootxyz/netbootxyz:latest
     container_name: netbootxyz
     environment:
       # - MENU_VERSION=2.0.47 # optional, sets menus version, unset uses latest
@@ -13,4 +13,5 @@ services:
       - 3000:3000
       - 69:69/udp
       - 8080:8080 #optional
+    network_mode: host
     restart: unless-stopped
