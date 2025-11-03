@@ -1,0 +1,21 @@
+manifestVersion: 1
+id: ozturk-netboot.xyz
+name: Netboot.xyz
+category: networking
+version: "0.7.6"
+tagline: Docker container for netboot.xyz
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-netboot.xyz/logo.jpg?raw=true
+description: >
+  Your favorite operating systems in one place. A network-based bootable operating system installer based on iPXE.
+developer: netbootxyz
+website: https://netboot.xyz/
+dependencies: []
+repo: https://github.com/netbootxyz/netboot.xyz
+support: https://github.com/netbootxyz/netboot.xyz/issues
+port: 8080
+gallery:
+path: ""
+releaseNotes: >
+  
+submitter: ozturkhome
+submission:
