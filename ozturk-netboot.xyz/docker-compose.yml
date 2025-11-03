@@ -1,17 +1,19 @@
 version: "3.7"
 
 services:
-  server:
-    image: ghcr.io/netbootxyz/netbootxyz:latest
+  netbootxyz:
+    image: ghcr.io/netbootxyz/netbootxyz
     container_name: netbootxyz
     environment:
-      # - MENU_VERSION=2.0.47 # optional, sets menus version, unset uses latest
+      - MENU_VERSION=2.0.84 # optional
+      - NGINX_PORT=8000 # optional
+      - WEB_APP_PORT=3000 # optional
     volumes:
-      -  ${APP_DATA_DIR}/data/config:/config # optional
-      -  ${APP_DATA_DIR}/data/assets:/assets # optional
+      - ${APP_DATA_DIR}/path/to/config:/config # optional
+      - ${APP_DATA_DIR}/path/to/assets:/assets # optional
     ports:
-      - 3000:3000
+      - 3000:3000  # optional, destination should match ${WEB_APP_PORT} variable above.
       - 69:69/udp
-      - 8080:8080 #optional
+      - 8080:8000  # optional, destination should match ${NGINX_PORT} variable above.
     network_mode: host
     restart: unless-stopped
