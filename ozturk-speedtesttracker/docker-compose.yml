@@ -17,5 +17,3 @@ services:
             - DB_CONNECTION=sqlite
         volumes:
             - ${APP_DATA_DIR}/data:/config
-            - ${APP_DATA_DIR}/data/keys.json:/config/keys:ro
-        entrypoint: ["/bin/sh", "-c", "export APP_KEY=$(jq -r '.APP_KEY' /keys.json) && exec /init"]
