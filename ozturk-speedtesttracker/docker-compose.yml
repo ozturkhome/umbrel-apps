@@ -1,19 +1,18 @@
 version: "3.7"
 
 services:
-    speedtest-tracker:
-        image: lscr.io/linuxserver/speedtest-tracker:latest
-        restart: unless-stopped
-        container_name: speedtest-tracker
-        ports:
-            - 8000:80
-            - 8443:443
-        env_file:
-            - .env
-        environment:
-            - PUID=1000
-            - PGID=1000
-            - APP_KEY=${APP_KEY}
-            - DB_CONNECTION=sqlite
-        volumes:
-            - ${APP_DATA_DIR}/data:/config
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    restart: unless-stopped
+    container_name: speedtest-tracker
+    ports:
+      - "8000:80"
+    env_file:
+      - ./data/.env
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - APP_KEY=${APP_KEY}
+      - DB_CONNECTION=sqlite
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
