@@ -6,12 +6,15 @@ services:
         restart: unless-stopped
         container_name: speedtest-tracker
         ports:
-            - 8080:8000
-            - 8443:8443
+            - 8000:80
+            - 8443:443
+        env_file:
+            - .env
         environment:
             - PUID=1000
             - PGID=1000
-            - APP_KEY=
+            - APP_URL=http://localhost:8080
+            - APP_KEY=${APP_KEY}
             - DB_CONNECTION=sqlite
         volumes:
             - ${APP_DATA_DIR}/data:/config
