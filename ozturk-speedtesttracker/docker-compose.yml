@@ -1,43 +1,42 @@
 
 version: "3.7"
+
 services:
-  speedtest-tracker:
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - DB_CONNECTION=mysql
-      - DB_HOST=speedtest-tracker-db
-      - DB_PORT=3306
-      - DB_DATABASE=speedtest_tracker
-      - DB_USERNAME=umbrel
-      - DB_PASSWORD=umbrel
-      - TZ=America/Chicago
-    volumes:
-      - "/etc/localtime:/etc/localtime:ro"
-      - "${APP_DATA_DIR}/config:/config"
-      - "${APP_DATA_DIR}/web:/etc/ssl/web"
-    image: "linuxserver/speedtest-tracker:1.6.10"
-    restart: unless-stopped
-    depends_on:
-      - speedtest-tracker-db
-    networks:
-      - speedtest_tracker_network
-  speedtest-tracker-db:
-    image: mariadb:10
-    restart: always
-    environment:
-      - MARIADB_DATABASE=speedtest_tracker
-      - MARIADB_USER=umbrel
-      - MARIADB_PASSWORD=umbrel
-      - MARIADB_RANDOM_ROOT_PASSWORD=true
-    volumes:
-      - "${APP_DATA_DIR}/mysql:/var/lib/mysql"
-    networks:
-      - speedtest_tracker_network
-  app_proxy:
-    environment:
-      APP_HOST: ozturk-speedtesttracker_speedtest-tracker_1
-      APP_PORT: "10163"
-networks:
-  speedtest_tracker_network:
-    driver: bridge
+    speedtest-tracker:
+        image: lscr.io/linuxserver/speedtest-tracker:latest
+        restart: unless-stopped
+        container_name: speedtest-tracker
+        ports:
+            - 8080:8000
+            - 8443:8443
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - APP_KEY=
+            - DB_CONNECTION=pgsql
+            - DB_HOST=db
+            - DB_PORT=5432
+            - DB_DATABASE=speedtest_tracker
+            - DB_USERNAME=umbrel
+            - DB_PASSWORD=umbrel
+        volumes:
+            - ${APP_DATA_DIR}/data/config:/config
+            - ${APP_DATA_DIR}/data/keys:/config/keys
+        depends_on:
+            - db
+    db:
+        image: postgres:17
+        restart: always
+        environment:
+            - POSTGRES_DB=speedtest_tracker
+            - POSTGRES_USER=umbrel
+            - POSTGRES_PASSWORD=umbrel
+        volumes:
+            - speedtest-db:/var/lib/postgresql/data
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+            interval: 5s
+            retries: 5
+            timeout: 5s
+volumes:
+  speedtest-db:
