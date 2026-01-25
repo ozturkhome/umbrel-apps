@@ -26,7 +26,7 @@ backupIgnore:
   - data/redis/*
 developer: Outline
 website: https://www.getoutline.com/
-submitter: al-lac
+submitter: ozturkhome
 submission: https://github.com/getumbrel/umbrel-apps/pull/4129
 repo: https://github.com/outline/outline
 support: https://github.com/outline/outline/discussions
