@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-jdownloader2
 category: networking
 name: JDownloader2
-version: "25.07.2"
+version: "26.01.1"
 tagline: Docker container for JDownloader 2
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/icon.png
 description: >
@@ -27,11 +27,8 @@ torOnly: false
 releaseNotes: >
   Changes in this release:
 
-  Updated baseimage to version 4.7.1, which brings the following changes (since last used version):
-  Added environment variable that allows configuring the web authentication token lifetime.
-  Fixed compatibility issues that were introduced with support of GTK4 applications.
-  Increased the default service ready timeout from 5 seconds to 10 seconds and allow runtime adjustment via environment variable.
-  Rebuild against latest distro images to get security fixes.
+  Updated baseimage to version 4.10.6, which brings the following changes:
+  On Mac devices, fixed conversion of Command+ shortcuts to the proper Alt+ shortcuts for Linux applications.
 permissions:
   - STORAGE_DOWNLOADS
 submitter: ozturkhome
