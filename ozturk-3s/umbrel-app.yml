@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-3s
 name: s-ui
 category: networking
-version: "1.3.7"
+version: "1.3.11"
 tagline: Docker container for s-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3s/logo.jpg?raw=true
 description: >
@@ -18,6 +18,22 @@ path: "/app"
 defaultUsername: "admin"
 defaultPassword: "admin"
 releaseNotes: >
+  What's Changed
   
+  Sing-Box v1.12.23
+  Clone inbound #1005 #636
+
+  Frontend
+  Vuetify v4 and dependencies
+  urltest for bulk outbound #734
+  add a line for oubound delay
+  dial options for inbound client side #982
+  
+  Bug Fixes
+  fix inbound delete affects on client #1008
+  Fix directory when running as administrator #1009 @sevcator
+  fix docker logs and db #1019
+  fix crash on restart due to change #1030
+  fix detecting change on reload
 submitter: ozturkhome
 submission:

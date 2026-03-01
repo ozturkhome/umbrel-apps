@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-jdownloader2
 category: networking
 name: JDownloader2
-version: "26.01.1"
+version: "26.02.3"
 tagline: Docker container for JDownloader 2
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/icon.png
 description: >
@@ -27,8 +27,8 @@ torOnly: false
 releaseNotes: >
   Changes in this release:
 
-  Updated baseimage to version 4.10.6, which brings the following changes:
-  On Mac devices, fixed conversion of Command+ shortcuts to the proper Alt+ shortcuts for Linux applications.
+  Updated baseimage to version 4.11.2, bringing the following changes
+  Fixed X server failing to find the appropriate Mesa driver on some setups.
 permissions:
   - STORAGE_DOWNLOADS
 submitter: ozturkhome

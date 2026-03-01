@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-3x
 name: 3x-ui
 category: networking
-version: "2.8.8"
+version: "2.8.10"
 tagline: Docker container for 3x-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3x/logo.jpg?raw=true
 description: >
@@ -26,25 +26,26 @@ defaultPassword: "admin"
 releaseNotes: >
   What's Changed New
 
-  Add Hysteria2 outbound protocol support
-  Add TUN protocol for inbound
-  Add UDP mask support for Hysteria outbound
-  Add x-ui.service.arch file @nebulosa2007
-  Add port selection and checks for ACME HTTP-01 listener
-  Added curl package to Dockerfile @VolgaIgor
+  Finalmask: Add XICMP
+  feat: implement 'last IP wins' policy for IP limitation @AungYeZawDev
+  feat: add openssl to dockerfile @mojixcoder
+  Add url speed test for outbound @surbiks
   
   Update & improvement
-  Update minimum Xray version requirement
-  feat: improve BBR management with sysctl.d and backup support @nebulosa2007
-  Feature: Use of username and passwords consisting of several words @vorontsov-amd
-  Enhance WebSocket client connection logic and improve event listener management @lolka1333
-  refactor update geofiles fuctions @nebulosa2007
-  Refactor ca-certificate dependency @nebulosa2007
-  Default listen address to 0.0.0.0 in GenXrayInboundConfig
-  Xray Core v26.1.18
+  Remove allowInsecure
+  refactor: set default ProfileUrl @nebulosa2007
+  refactor: set header only if it not empty @nebulosa2007
+  Refactor TLS peer cert verification settings
+  Update geofiles according 304 http respond @nebulosa2007
+  [Windows] Use MSYS2 to fix the runtime CGO problem @EbrahimTahernejad
+  Add workflow to clean old GitHub Actions caches
+  Xray Core v26.2.6 and dependency updates
+  Update translate.es_ES.toml @emirjorge
   
   Bug fixed
-  Fixed incorrect filtering for IDN top-level domains @VolgaIgor
-  Return nil if no error in GetXrayErr
+  Fix ipv6 hostname parsing for subscriptions @bakatrouble
+  fix security issue
+  fix : Uncontrolled data used in path expression
+  fix: trim whitespace from comma-separated list values in routing rules @Alimpo
 submitter: ozturkhome
 submission:

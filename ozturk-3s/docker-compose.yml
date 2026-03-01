@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-      image: alireza7/s-ui
+      image: alireza7/s-ui:v1.3.11
       container_name: s-ui
       hostname: "s-ui"
       volumes:

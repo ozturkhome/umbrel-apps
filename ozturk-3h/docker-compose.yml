@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: jonssonyan/h-ui
+    image: jonssonyan/h-ui:v0.0.22
     container_name: h-ui
     hostname: h-ui
     network_mode: host
