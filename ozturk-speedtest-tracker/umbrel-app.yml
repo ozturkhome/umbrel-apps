@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: ozturk-speedtesttracker
-name: SpeedTest-Tracker
+id: ozturk-speedtest-tracker
+name: Speedtest Tracker
 category: networking
-version: "1.7.0"
+version: "1.6.6"
 tagline: Docker container for speedtest-tracker
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-speedtesttracker/logo.jpg?raw=true
 description: >
@@ -12,10 +12,10 @@ website: https://github.com/alexjustesen/Speedtest-Tracker
 dependencies: []
 repo: https://github.com/alexjustesen/Speedtest-Tracker
 support: https://github.com/alexjustesen/Speedtest-Tracker/issues
-port: 8000
+port: 8622
 path: ""
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "login@umbrel.admin"
+defaultPassword: "umbrel"
 gallery:
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/dashboard_screenshot.jpg
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/results_screenshot.jpg

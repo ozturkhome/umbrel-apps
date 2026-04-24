@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    image: jlesage/jdownloader-2:v26.02.3
+    image: jlesage/jdownloader-2:v26.03.1
     restart: on-failure
     stop_grace_period: 1m
     #network_mode: host
@@ -12,7 +12,8 @@ services:
     # For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. Chromium runs in no-sandbox test mode without it.
       - seccomp:unconfined # Enable unconfined seccomp mode for this container (optional)
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/config:/config:rw
+      - ${APP_DATA_DIR}/data/output:/output:rw
       - ${UMBREL_ROOT}/data/storage/downloads:/downloads
     environment:
       - PUID=1000

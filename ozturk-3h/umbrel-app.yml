@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-3h
 name: h-ui
 category: networking
-version: "0.0.22"
+version: "0.0.23"
 tagline: Docker container for h-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3h/logo.jpg?raw=true
 description: >
@@ -16,14 +16,15 @@ port: 8081
 gallery:
 path: ""
 releaseNotes: >
-  Added account remark feature
-  Added support for custom Telegram DNS servers (env: TELEGRAM_DNS_SERVERS) #193
-  Fixed Hysteria zombie process issue #191
-  Upgraded Go to 1.21
+  Added configurable congestion control: select between BBR and Reno, with three BBR profiles (standard, conservative, aggressive) for fine-tuning congestion control behavior
+  Added xForwarded option to masquerade proxy for setting X-Forwarded-For/Host/Proto headers
+  Added Russian language support #205
+  Fixed H UI port skipping issue
   
-  新增账户备注功能
-  新增 Telegram DNS Server 自定义配置（环境变量：TELEGRAM_DNS_SERVERS） #193
-  修复 Hysteria 僵尸进程问题 #191
-Go 版本升级至 1.21
+  新增可配置拥塞控制：可在 BBR 和 Reno 之间选择，并提供标准、保守、激进三种 BBR 预设（standard、conservative、aggressive）用于精细调节拥塞控制行为
+  伪装代理新增 xForwarded 选项，用于设置 X-Forwarded-For/Host/Proto 头
+  新增俄语 #205
+  修复 H UI 端口跳跃问题
+  Go 版本升级至 1.21
 submitter: ozturkhome
 submission:

@@ -1,8 +1,8 @@
 manifestVersion: 1
-id: ozturk-jdownloader2
+id: ozturk-jdownloader-2
 category: networking
 name: JDownloader2
-version: "26.02.3"
+version: "26.03.1"
 tagline: Docker container for JDownloader 2
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/icon.png
 description: >
@@ -27,8 +27,9 @@ torOnly: false
 releaseNotes: >
   Changes in this release:
 
-  Updated baseimage to version 4.11.2, bringing the following changes
-  Fixed X server failing to find the appropriate Mesa driver on some setups.
+  Updated baseimage to version 4.11.3, bringing the following changes:
+  Enable xcompmgr output only when debug is enabled.
+  Enhanced self-signed certificates by including the Subject Alternative Name (SAN) and using the container hostname instead of a dummy domain name.
 permissions:
   - STORAGE_DOWNLOADS
 submitter: ozturkhome
