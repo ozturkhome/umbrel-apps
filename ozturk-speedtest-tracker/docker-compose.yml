@@ -5,7 +5,7 @@ services:
       APP_PORT: 80
 
   app:
-    image: ghcr.io/linuxserver/speedtest-tracker:1.14.0sha256:e119c2ace7661a14186f6c58d3a8777035456c764f836f00736359dd4cb88524
+    image: ghcr.io/linuxserver/speedtest-tracker:1.14.0@sha256:e119c2ace7661a14186f6c58d3a8777035456c764f836f00736359dd4cb88524
     restart: on-failure
     environment:
       PUID: 1000

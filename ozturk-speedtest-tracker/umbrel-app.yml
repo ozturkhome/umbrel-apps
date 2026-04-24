@@ -2,9 +2,9 @@ manifestVersion: 1
 id: ozturk-speedtest-tracker
 name: Speedtest Tracker
 category: networking
-version: "1.6.6"
+version: "1.14.0"
 tagline: Docker container for speedtest-tracker
-icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-speedtesttracker/logo.jpg?raw=true
+icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-speedtest-tracker/logo.jpg?raw=true
 description: >
   A Docker image to check your internet speed using Ookla's Speedtest service. Build using Laravel and the Speedtest CLI.
 developer: alexjustesen
@@ -21,6 +21,13 @@ gallery:
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/results_screenshot.jpg
   - https://github.com/alexjustesen/speedtest-tracker/raw/main/.github/screenshots/general_settings_screenshot.jpg
 releaseNotes: >
-  
+  What's Changed
+  gh actions: bump actions/create-github-app-token from 2 to 3 by @dependabot[bot] in alexjustesen/speedtest-tracker#2745
+  Bump vite from 6.4.1 to 6.4.2 in the npm_and_yarn group across 1 directory by @dependabot[bot] in alexjustesen/speedtest-tracker#2748
+  chore: upgraded to Laravel v13 by @alexjustesen in alexjustesen/speedtest-tracker#2757
+  chore: upgraded to Livewire v4 and Filament v5 by @alexjustesen in alexjustesen/speedtest-tracker#2758
+  feat: add SQLite vacuum maintenance action and schedule by @alexjustesen in alexjustesen/speedtest-tracker#2760
+  chore: simplify CI workflow by retaining only SQLite by @alexjustesen in alexjustesen/speedtest-tracker#2761
+  Release v1.14.0 by @alexjustesen in alexjustesen/speedtest-tracker#2762
 submitter: ozturkhome
 submission:
