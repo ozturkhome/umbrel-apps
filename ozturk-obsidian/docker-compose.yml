@@ -7,7 +7,7 @@ services:
       APP_PORT: 3000
 
   server:
-    image: linuxserver/obsidian:1.12.7:sha256:626b18b5cd30d0786a9856bf730dee64d378ae67c0e3607bd689c6479552580e
+    image: linuxserver/obsidian:1.12.7@sha256:626b18b5cd30d0786a9856bf730dee64d378ae67c0e3607bd689c6479552580e
     restart: on-failure
     environment:
       - PUID=1000
