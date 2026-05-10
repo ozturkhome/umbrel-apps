@@ -1,0 +1,57 @@
+manifestVersion: 1
+id: ozturk-obsidian
+category: files
+name: Obsidian
+version: "1.12.7"
+tagline: The private and flexible writing app that adapts to the way you think
+description: >-
+  **Your thoughts are yours.**
+
+  Obsidian stores notes on your device, so you can access them quickly, even offline. No one else can read them, not even us.
+
+
+  **Your mind is unique.**
+
+  With thousands of plugins and themes, you can shape Obsidian to fit your way of thinking.
+
+
+  **Your knowledge should last.**
+
+  Obsidian uses open, non-proprietary files, so you're never locked in, and can preserve your data for the long term.
+releaseNotes: >-
+  Improvements
+
+  Obsidian CLI
+  The Obsidian Installer is now bundled with a new binary file for using the CLI. This new method replaces the old method of calling the Electron binary, resulting in significantly faster terminal interactions. Requires downloading the latest installer.
+  Added autocompletion for Obsidian commands to the terminal interface (TUI) when using the id= parameter.
+  
+  Bug fixes
+  Obsidian CLI
+  Fixed the Obsidian CLI incorrectly checking for a Linux-specific directory on macOS.
+  Changed the CLI socket file to a hidden dotfile on macOS and Linux.
+  
+  Editor
+  Fixed several issues with copy, cut, and paste when no text is selected.
+  Copying and pasting a line no longer places the cursor in the wrong position.
+  In tables, copying or cutting without a selection now correctly copies only the cell contents.
+  Pasting a URL while text is selected across multiple cursors now wraps each selection as a Markdown link ([selected text](url)).
+  Fixed images inside callouts showing unwanted scrollbars in Reading mode.
+  Fixed double-clicking an image in Live Preview not resetting its size.
+  
+  Developer
+  The installer has been updated to use Electron v39.8.3 (requires downloading the latest installer).
+
+  Full release notes are available at https://obsidian.md/changelog/
+developer: Obsidian
+website: https://obsidian.md/
+dependencies: []
+repo: https://github.com/linuxserver/docker-obsidian
+support: https://github.com/linuxserver/docker-obsidian/issues
+port: 3435
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+submitter: al-lac
+submission: https://github.com/getumbrel/umbrel-apps/pull/1921
