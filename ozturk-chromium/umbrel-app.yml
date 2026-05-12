@@ -8,8 +8,8 @@ description: >-
   This Image contains a browser-accessible version of chromium. 
 releaseNotes: >-
 
-developer: linuxserver
-website: https://hub.docker.com/r/linuxserver/chromium
+developer: kasmweb
+website: https://hub.docker.com/r/kasmweb/chromium
 dependencies: []
 repo: https://github.com/ozturkhome/umbrel-apps
 support: https://github.com/ozturkhome/umbrel-apps/issues
@@ -19,8 +19,8 @@ gallery:
   - 2.jpg
   - 3.jpg
 path: ""
+deterministicPassword: true
 defaultUsername: ""
-defaultPassword: ""
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/chromium.png
 submitter: ozturkhome
 submission: https://github.com/ozturkhome/umbrel-apps
