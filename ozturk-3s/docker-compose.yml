@@ -1,13 +1,13 @@
 version: "3.7"
 
 services:
-  server:
-      image: alireza7/s-ui:v1.4.1
-      container_name: s-ui
-      hostname: "s-ui"
-      volumes:
-        - ${APP_DATA_DIR}/data:/etc/app
-      entrypoint: "./entrypoint.sh"
-      tty: true
-      network_mode: host
-      restart: always
+  app:
+    image: alireza7/s-ui:v1.4.1
+    container_name: s-ui
+    hostname: "s-ui"
+    volumes:
+      - ${APP_DATA_DIR}/data:/etc/app
+    entrypoint: "./entrypoint.sh"
+    tty: true
+    network_mode: host
+    restart: always

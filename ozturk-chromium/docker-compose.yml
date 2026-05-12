@@ -1,15 +1,8 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: ozturk-chromium_chromium_1
-      APP_PORT: "6901"
-      PROXY_AUTH_ADD: "false"
-
-  chromium:
+  app:
     image: kasmweb/chromium:1.18.0
-    container_name: ozturk-chromium_chromium_1
     shm_size: 1gb
     environment:
       - VNC_PW= "$APP_PASSWORD"
