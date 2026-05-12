@@ -1,14 +1,14 @@
 manifestVersion: 1
 id: ozturk-chromium
-category: browser
-name: chromium
+category: networking
+name: Chromium
 version: "1.18.0"
-tagline: chromium
+tagline: Browser-accessible Chromium
 description: >-
-  This Image contains a browser-accessible version of chromium. 
+  This app provides a browser-accessible version of Chromium using the KasmWeb Chromium image.
 releaseNotes: >-
-
-developer: kasmweb
+  Initial release.
+developer: KasmWeb
 website: https://hub.docker.com/r/kasmweb/chromium
 dependencies: []
 repo: https://github.com/ozturkhome/umbrel-apps
@@ -18,9 +18,9 @@ gallery:
   - 1.jpg
   - 2.jpg
   - 3.jpg
-path: ""
+path: "/"
 deterministicPassword: true
-defaultUsername: ""
+defaultUsername: kasm_user
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/chromium.png
 submitter: ozturkhome
 submission: https://github.com/ozturkhome/umbrel-apps

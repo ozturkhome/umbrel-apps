@@ -12,7 +12,7 @@ services:
     container_name: ozturk-chromium_chromium_1
     shm_size: 1gb
     environment:
-      - VNC_PW="$APP_PASSWORD"
+      - VNC_PW= "$APP_PASSWORD"
       - APP_ARGS=--remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-first-run --no-default-browser-check
     volumes:
       - ${APP_DATA_DIR}/config:/home/kasm-user/.config/chromium
