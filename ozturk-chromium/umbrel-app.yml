@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: ozturk-chromium
-category: networking
+category:
 name: Chromium
 version: "1.18.0"
 tagline: Browser-accessible Chromium

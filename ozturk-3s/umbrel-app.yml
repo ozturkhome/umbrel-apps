@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: ozturk-3s
 name: s-ui
-category: networking
+category:
 version: "1.4.1"
 tagline: Docker container for s-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3s/logo.jpg?raw=true

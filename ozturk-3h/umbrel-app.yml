@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: ozturk-3h
 name: h-ui
-category: networking
+category:
 version: "0.0.23"
 tagline: Docker container for h-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3h/logo.jpg?raw=true

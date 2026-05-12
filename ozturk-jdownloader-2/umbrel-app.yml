@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: ozturk-jdownloader-2
-category: networking
+category:
 name: JDownloader2
 version: "26.03.1"
 tagline: Docker container for JDownloader 2

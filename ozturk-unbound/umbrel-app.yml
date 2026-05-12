@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: ozturk-unbound
 name: Unbound
-category: networking
+category:
 version: "1.22.0"
 tagline: Docker container for unbound
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-unbound/logo.jpg?raw=true

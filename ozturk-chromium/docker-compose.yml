@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app:
     image: kasmweb/chromium:1.18.0
-    shm_size: 1gb
+    shm_size: 2gb
     environment:
       - VNC_PW= "$APP_PASSWORD"
       - APP_ARGS=--remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-first-run --no-default-browser-check
