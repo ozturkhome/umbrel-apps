@@ -5,15 +5,36 @@ services:
       APP_HOST: ozturk-chromium_chromium_1
       APP_PORT: 6901
       PROXY_AUTH_ADD: "false"
+  init-kasmvnc:
+    image: alpine:latest
+    user: "0:0"
+    command:
+      - sh
+      - -c
+      - |
+        mkdir -p /vnc
+        printf '%s\n' \
+          'network:' \
+          '  interface: 0.0.0.0' \
+          '  ssl:' \
+          '    require_ssl: false' \
+          > /vnc/kasmvnc.yaml
+        chown -R 1000:1000 /vnc
+        chmod -R 755 /vnc
+    volumes:
+      - "${APP_DATA_DIR}/vnc:/vnc"
+    restart: "no"
   chromium:
     image: kasmweb/chromium:1.18.0
     shm_size: "2gb"
+    depends_on:
+      - init-kasmvnc
     environment:
       VNC_PW: "${APP_PASSWORD}"
       APP_ARGS: "--remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-first-run --no-default-browser-check --disable-crash-reporter --disable-crashpad"
-      KASM_PROFILE_LDR: "1"
     volumes:
       - "${APP_DATA_DIR}/profile:/kasm_profile_sync"
+      - "${APP_DATA_DIR}/vnc:/home/kasm-user/.vnc"
     expose:
       - "6901"
       - "9222"
