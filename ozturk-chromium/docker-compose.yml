@@ -5,15 +5,16 @@ services:
     environment:
       APP_HOST: ozturk-chromium_app_1
       APP_PORT: 6901
+      PROXY_AUTH_ADD: "false"
 
   app:
     image: kasmweb/chromium:1.18.0
     shm_size: "2gb"
     environment:
       VNC_PW: "${APP_PASSWORD}"
-      APP_ARGS: "--remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-first-run --no-default-browser-check"
+      APP_ARGS: "--remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-first-run --no-default-browser-check --disable-crash-reporter --disable-crashpad"
     volumes:
-      - "${APP_DATA_DIR}/config:/home/kasm-user/.config/chromium"
+      - "${APP_DATA_DIR}/profile:/home/kasm-user"
     expose:
       - "6901"
       - "9222"
