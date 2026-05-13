@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  app:
+  3s:
     image: alireza7/s-ui:v1.4.1
     container_name: s-ui
     hostname: "s-ui"

@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  app:
+  3x:
     image: ghcr.io/mhsanaei/3x-ui:v3.0.1
     container_name: 3x-ui
     hostname: "3x-ui"
