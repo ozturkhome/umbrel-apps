@@ -13,8 +13,9 @@ services:
     environment:
       VNC_PW: "${APP_PASSWORD}"
       APP_ARGS: "--remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-first-run --no-default-browser-check --disable-crash-reporter --disable-crashpad"
+      KASM_PROFILE_LDR: "1"
     volumes:
-      - "${APP_DATA_DIR}/profile:/home/kasm-user"
+      - "${APP_DATA_DIR}/profile:/kasm_profile_sync"
     expose:
       - "6901"
       - "9222"
