@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   3x:
-    image: ghcr.io/mhsanaei/3x-ui:v3.0.1
+    image: ghcr.io/mhsanaei/3x-ui:v3.1.0
     container_name: 3x-ui
     hostname: "3x-ui"
     volumes:

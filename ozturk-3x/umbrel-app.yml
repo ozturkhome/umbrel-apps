@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-3x
 name: 3x-ui
 category:
-version: "3.0.1"
+version: "3.1.0"
 tagline: Docker container for 3x-ui
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/ozturk-3x/logo.jpg?raw=true
 description: >
@@ -24,22 +24,6 @@ path: ""
 defaultUsername: "admin"
 defaultPassword: "admin"
 releaseNotes: >
-  Update & improvement
-  CodeQL: ignore v* tag pushes
-  Reduce observatory probe intervals and timeout
-  Run cache cleanup daily and reduce cutoff to 1 day
-  Add None option VLESS auth selection
-  Extract bot command setup into trySetBotCommands
-  Lower minimum Xray version
 
-  Bug fixed
-  Fix: hysteria link gen crashes when echConfigList is a string @pwnnex
-  Fix xhttp xPadding settings missing from generated links (panel + subs) @pwnnex
-  Fix blank Xray Settings page from wrapped xrayTemplateConfig @pwnnex
-  Fix Hysteria External Proxy + include Hysteria in Clash subscription @pwnnex
-  sub json fix fragment noises effect @alireza0
-  fix timelocation for windows @alireza0
-  fix(panel): set ALPN to h3 when switching to Hysteria protocol @Imgodmaoyouknow
-  balancerTags with a default empty entry
 submitter: ozturkhome
 submission:
