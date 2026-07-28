@@ -1,0 +1,51 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: $APP_EVOLUTION_API_NODE_IP
+      APP_PORT: 8080
+
+  evolution-api:
+    image: atendai/evolution-api:v2.1.1
+    container_name: evolution-api_server_1
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_URL=http://${DEVICE_DOMAIN_NAME}:8080
+      - DOCKER_ENV_CI=true
+      - AUTHENTICATION_TYPE=apikey
+      - AUTHENTICATION_API_KEY=ChangeThisSuperSecretApiKey123!
+      - DATABASE_ENABLED=true
+      - DATABASE_CONNECTION_URI=postgresql://evolution:${APP_PASSWORD}@evolution-db:5432/evolution?schema=public
+      - DATABASE_CONNECTION_CLIENT_NAME=evolution_db
+      - REDIS_ENABLED=true
+      - REDIS_URI=redis://evolution-redis:6379
+      - REDIS_PREFIX_KEY=ev
+      - CACHE_REDIS_ENABLED=true
+      - CACHE_REDIS_URI=redis://evolution-redis:6379
+      - CACHE_REDIS_PREFIX_KEY=ev_cache
+    volumes:
+      - ${APP_DATA_DIR}/data/instances:/evolution/instances
+    depends_on:
+      - evolution-db
+      - evolution-redis
+
+  evolution-db:
+    image: postgres:15-alpine
+    container_name: evolution-api_db_1
+    restart: always
+    environment:
+      - POSTGRES_USER=evolution
+      - POSTGRES_PASSWORD=${APP_PASSWORD}
+      - POSTGRES_DB=evolution
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+
+  evolution-redis:
+    image: redis:7-alpine
+    container_name: evolution-api_redis_1
+    restart: always
+    volumes:
+      - ${APP_DATA_DIR}/data/redis:/data
