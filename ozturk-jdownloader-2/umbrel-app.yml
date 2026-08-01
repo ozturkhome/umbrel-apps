@@ -24,13 +24,9 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 torOnly: false
-releaseNotes: >
-  Changes in this release:
-
-  Updated baseimage to version 4.11.3, bringing the following changes:
-  Enable xcompmgr output only when debug is enabled.
-  Enhanced self-signed certificates by including the Subject Alternative Name (SAN) and using the container hostname instead of a dummy domain name.
 permissions:
   - STORAGE_DOWNLOADS
+releaseNotes: >
+
 submitter: ozturkhome
 submission: https://github.com/ozturkhome/umbrel-apps

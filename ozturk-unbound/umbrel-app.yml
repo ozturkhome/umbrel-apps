@@ -13,9 +13,9 @@ dependencies: []
 repo: https://github.com/MatthewVance/unbound-docker
 support: https://github.com/MatthewVance/unbound-docker/issues
 port: 5335
-gallery:
+gallery: []
 path: ""
 releaseNotes: >
-  
+
 submitter: ozturkhome
 submission: https://github.com/ozturkhome/umbrel-apps

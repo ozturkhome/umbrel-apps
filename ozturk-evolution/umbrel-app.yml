@@ -5,7 +5,7 @@ category:
 version: "2.1.1"
 tagline: Open-source WhatsApp API with multiple device support
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/evolution-api/logo.jpg
-description: >-
+description: >
   Evolution API is an open-source WhatsApp API based on Baileys. 
   It allows you to create instances, send text, media, audio, status, 
   and handle webhooks for incoming messages seamlessly from your Umbrel server.
@@ -18,5 +18,7 @@ port: 8080
 gallery: []
 path: ""
 defaultWithAuth: false
+releaseNotes: >
+
 submitter: ozturkhome
 submission: https://github.com/ozturkhome/umbrel-apps
