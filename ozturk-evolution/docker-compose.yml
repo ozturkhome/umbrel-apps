@@ -17,17 +17,27 @@ services:
       - DOCKER_ENV_CI=true
       - AUTHENTICATION_TYPE=apikey
       - AUTHENTICATION_API_KEY=ChangeThisSuperSecretApiKey123!
+      
       - DATABASE_ENABLED=true
+      - DATABASE_PROVIDER=postgresql
       - DATABASE_CONNECTION_URI=postgresql://evolution:${APP_PASSWORD}@evolution-db:5432/evolution?schema=public
       - DATABASE_CONNECTION_CLIENT_NAME=evolution_db
+      - DATABASE_SAVE_DATA_INSTANCE=true
+      - DATABASE_SAVE_DATA_NEW_MESSAGE=true
+      - DATABASE_SAVE_MESSAGE_UPDATE=true
+
       - REDIS_ENABLED=true
       - REDIS_URI=redis://evolution-redis:6379
       - REDIS_PREFIX_KEY=ev
       - CACHE_REDIS_ENABLED=true
       - CACHE_REDIS_URI=redis://evolution-redis:6379
       - CACHE_REDIS_PREFIX_KEY=ev_cache
+
+      - MEDIA_AUTO_DOWNLOAD=true
+      - MEDIA_TYPE=base64
     volumes:
       - ${APP_DATA_DIR}/data/instances:/evolution/instances
+      - ${APP_DATA_DIR}/data/store:/evolution/store
     depends_on:
       - evolution-db
       - evolution-redis
