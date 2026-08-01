@@ -1,7 +1,7 @@
 manifestVersion: 1
-id: evolution-api
+id: ozturk-evolution_api
 name: Evolution API
-category: developer
+category:
 version: "2.1.1"
 tagline: Open-source WhatsApp API with multiple device support
 icon: https://raw.githubusercontent.com/ozturkhome/umbrel-apps/refs/heads/main/evolution-api/logo.jpg
