@@ -3,54 +3,61 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: $APP_EVOLUTION_API_NODE_IP
-      APP_PORT: 8080
+      APP_HOST: evolution_frontend_1
+      APP_PORT: 80
 
-  evolution-api:
-    image: evoapicloud/evolution-api:2.4.0-rc2
+  api:
+    image: evoapicloud/evolution-api:latest
     restart: always
+    ports:
+      - "8080:8080"
     environment:
       - SERVER_URL=http://${DEVICE_DOMAIN_NAME}:8080
       - DOCKER_ENV_CI=true
       - AUTHENTICATION_TYPE=apikey
       - AUTHENTICATION_API_KEY=ChangeThisSuperSecretApiKey123!
-      
       - DATABASE_ENABLED=true
       - DATABASE_PROVIDER=postgresql
-      - DATABASE_CONNECTION_URI=postgresql://evolution:${APP_PASSWORD}@evolution-db:5432/evolution?schema=public
+      - DATABASE_CONNECTION_URI=postgresql://evolution:${APP_PASSWORD}@evolution-postgres:5432/evolution?schema=public
       - DATABASE_CONNECTION_CLIENT_NAME=evolution_db
-      - DATABASE_SAVE_DATA_INSTANCE=true
-      - DATABASE_SAVE_DATA_NEW_MESSAGE=true
-      - DATABASE_SAVE_MESSAGE_UPDATE=true
-
       - REDIS_ENABLED=true
-      - REDIS_URI=redis://evolution-redis:6379
+      - REDIS_URI=redis://redis:6379
       - REDIS_PREFIX_KEY=ev
       - CACHE_REDIS_ENABLED=true
-      - CACHE_REDIS_URI=redis://evolution-redis:6379
+      - CACHE_REDIS_URI=redis://redis:6379
       - CACHE_REDIS_PREFIX_KEY=ev_cache
-
       - MEDIA_AUTO_DOWNLOAD=true
       - MEDIA_TYPE=base64
     volumes:
       - ${APP_DATA_DIR}/data/instances:/evolution/instances
       - ${APP_DATA_DIR}/data/store:/evolution/store
     depends_on:
-      - evolution-db
-      - evolution-redis
+      - redis
+      - evolution-postgres
 
-  evolution-db:
-    image: postgres:15-alpine
+  frontend:
+    image: evoapicloud/evolution-manager:latest
     restart: always
-    environment:
-      - POSTGRES_USER=evolution
-      - POSTGRES_PASSWORD=${APP_PASSWORD}
-      - POSTGRES_DB=evolution
-    volumes:
-      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
+    # Frontend paneli doğrudan app_proxy üzerinden 80 portuyla sunulur
 
-  evolution-redis:
-    image: redis:7-alpine
+  redis:
+    image: redis:latest
     restart: always
+    command: >
+      redis-server --appendonly yes
     volumes:
       - ${APP_DATA_DIR}/data/redis:/data
+
+  evolution-postgres:
+    image: postgres:15
+    restart: always
+    command:
+      - postgres
+      - -c
+      - max_connections=1000
+    environment:
+      - POSTGRES_DB=evolution
+      - POSTGRES_USER=evolution
+      - POSTGRES_PASSWORD=${APP_PASSWORD}
+    volumes:
+      - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
