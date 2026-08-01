@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: ozturk-evolution_api
+id: ozturk-evolutionapi
 name: Evolution API
 category:
 version: "2.1.1"
@@ -17,7 +17,6 @@ support: https://github.com/EvolutionAPI/evolution-api/issues
 port: 8080
 gallery: []
 path: ""
-defaultWithAuth: false
 releaseNotes: >
 
 submitter: ozturkhome
