@@ -2,7 +2,7 @@ manifestVersion: 1
 id: ozturk-jdownloader-2
 category:
 name: JDownloader2
-version: "26.03.1"
+version: "26.07.2"
 tagline: Docker container for JDownloader 2
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/JDownloader2/icon.png
 description: >
